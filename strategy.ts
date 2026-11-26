@@ -1,6 +1,6 @@
 import type { Bot, BotState, OrderInput } from './vendor/agentfun-bot.ts';
 
-export const MODE: 'G' | 'M' = 'G';
+export const MODE: 'G' | 'M' = 'M';
 export const PARAMS = {
   mode: MODE, scouts: true, graduation: 85.00536,
   gWindow: 180, gZone: 60, gUpper: 83, gMain: 0.45, gScout: 0.04,

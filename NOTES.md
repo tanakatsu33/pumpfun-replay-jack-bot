@@ -7,6 +7,9 @@
 - Hold cash: 0 SOL, 0 drawdown, 0 fills / coins; concentration undefined. Fails coin guardrail. Stress not requested.
 - Diagnostic replay: 35 CompleteEvents with a prior trade. Last real quote reserves ranged 85.005359057–85.005362401 SOL; median 85.005359057. Set reference 85.00536 SOL. Temporary diagnostic deliberately threw after done to capture values in grader stderr; removed before strategy validation.
 
+## Type G initial validation — 5bb51c5
+Dev -0.226236889 SOL; max drawdown 2.3783967%; 143 fills / 63 coins / 71 qualifying round trips; 7 rejected / 4 failed. Top-3 share 64% of positive gains; without top 3 -0.24 SOL. Stress 20 (jobs 4): median -0.15, p10 -0.40, p90 -0.04 SOL, 18/20 losing. Guardrails met; byte-identical action logs. Action SHA 5e4d48e1c1a7a3865276ab237b87437082564228e36a7dd339fb81627e159e02.
+
 ## Initial parameters (revision 1)
 G: scout+main; 180-slot confirmation in three 60-slot buckets, >=0.5 SOL net each; >=2 buyers each; wallet share <=65%; rising bucket highs; >=3% price rise. Main 60–83 SOL, last flow >= middle, projected completion <2400 slots; scout 25–60 SOL, created <6000 slots, increasing buyers, projected completion <1800 slots. Scout 0.04 / main 0.45 SOL. Stall 90, hold 1500, trail 12%.
 M: 90 slots in three 30-slot buckets; >=0.3 SOL each, >=2 buyers each, wallet share <=40%, bucket highs grow >=0.5%, current within 0.5% of high, rise 4–45%, reserve 8–65 SOL. Size 0.12 SOL, hold 180, trail 4%, exit when 20-slot flow <=0.
